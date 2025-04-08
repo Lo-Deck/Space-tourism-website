@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="description" content="Exercise Frontend Mentor, Space tourism website crew page">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap" rel="stylesheet">
+      <link href="styles.css" rel="stylesheet" type="text/css">
+      <title>Frontend Mentor | Space tourism website crew page</title>
+    </head>
+    <body class="crew">
+
+      <header class="header-container">
+        <a href="./index.html"><img class="header-logo" src="./assets/shared/logo.svg" alt="logo"></a>
+        <hr class="line-header">
+        <button class="button button-menu"><img src="./assets/shared/icon-hamburger.svg" alt="open menu"></button>
+        <nav class="menu barlow-condensed-regular">
+          <ul class="list list-menu">
+            <li class="li-menu"><a href="./index.html"><span class="barlow-condensed-bold">00</span>Home</a></li>
+            <li class="li-menu"><a href="./destination.html"><span class="barlow-condensed-bold">01</span>Destination</a></li>
+            <li class="li-menu selected"><a href="./crew.html"><span class="barlow-condensed-bold">02</span>Crew</a></li>
+            <li class="li-menu"><a href="./technology.html"><span class="barlow-condensed-bold">03</span>Technology</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="page-container">
+      	<h1 class="page-title barlow-condensed-regular"><span class="barlow-condensed-bold">02</span> Meet your crew</h1>
+				<div class="container-text">
+					<h2 class="sub-title bellefair-regular" id="here"><span>Commander</span><span>Douglas Hurley</span></h2>
+					<p class="text barlow-regular">Douglas Gerald Hurley is an American engineer, former Marine Corps pilot 
+					and former NASA astronaut. He launched into space for the third time as 
+					commander of Crew Dragon Demo-2.</p>
+					<ul class="list list-member">
+						<li class="li-member"><a class="clip selected" href="#hurley"></a></li>
+						<li class="li-member"><a class="clip" href="#shuttleworth"></a></li>
+						<li class="li-member"><a class="clip" href="#glover"></a></li>
+						<li class="li-member"><a class="clip" href="#ansari"></a></li>
+					</ul>
+				</div>				
+				<div class="image-shadow">
+					<picture class="container-crew-image">
+						<source srcset="./assets/crew/image-douglas-hurley.webp" type="image/webp">
+						<img class="crew-image" src="./assets/crew/image-douglas-hurley.png" alt="hero">						
+					</picture>						
+				</div>
+      </main>
+
+
+    <script src="./script.js"></script>
+
+    </body>
+</html>

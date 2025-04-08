@@ -1,0 +1,420 @@
+
+@import "styles-destination.css";
+@import "styles-crew.css";
+@import "styles-technology.css";
+
+
+:root{
+
+  /* @link https://utopia.fyi/clamp/calculator?a=768,1440,16—48 */
+
+  --width-mobile-327px: 20.4375rem;
+  --width-mobile-to-desktop: clamp(20.4375rem, -1.0916rem + 91.8575vw, 43rem);
+
+  /*COLOR*/
+
+  --blue-900: #0b0d17;
+  --blue-300: #d0d6f9;
+
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  min-width: 17.5rem;
+  min-height: 100vh;
+  background: url(./assets/home/background-home-mobile.jpg) no-repeat 0 0 / 100% 100%;
+  padding: clamp(0rem, 3.9474rem + -16.8421vw, 1rem);
+}
+
+
+/**TEXT**/
+
+.bellefair-regular {
+  font-family: "Bellefair", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.barlow-condensed-regular {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.barlow-condensed-bold {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.barlow-regular {
+  font-family: "Barlow", sans-serif;
+  font-size: clamp(0.9375rem, 0.8779rem + 0.2545vw, 1rem);
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.8;
+  color: var(--blue-300);
+}
+
+/****/
+
+
+img{
+  display: block;
+}
+
+.button{
+  display: block;  
+  background: transparent;
+  border-style: none;
+}
+
+.button:hover{
+  cursor: pointer;
+  /* filter: brightness(1.2); */
+}
+
+.list{
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/*HEADER*/
+
+.header-container{
+  max-width: var(--width-mobile-to-desktop);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1.5rem 0;
+}
+
+.header-logo{
+  width: clamp(2.5rem, 2.0229rem + 2.0356vw, 3rem);
+  height: clamp(2.5rem, 2.0229rem + 2.0356vw, 3rem);
+  background: #fff;
+  border-radius: 50%;
+}
+
+.line-header{
+  display: none;
+}
+
+.button-menu{
+  width: 1.5rem;
+  height: 1.5rem;
+  z-index: 10;
+}
+
+.menu{
+  display: none;
+  width: 15.875rem;
+  height: 100vh;
+  background: hsla(0, 0%, 0%, 0.2);
+  backdrop-filter: blur(50px);
+  padding-left: 2rem;
+  position: fixed;
+    top: 0;  right: 0;
+}
+
+.background-menu{
+  width: 100%;
+  height: 100%;
+  background: hsla(0, 0%, 0%, 0.8);
+}
+
+.list-menu{
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: 0.12rem;
+  margin-top: 8rem;
+}
+
+.li-menu{
+  margin-bottom: 1.75rem;
+}
+
+.li-menu.selected{
+  border-right: 0.2rem solid #fff;
+}
+
+.li-menu span{
+  display: inline-block;
+  font-weight: 700;
+  margin-right: 0.6rem;
+}
+
+
+/*MAIN*/
+
+.main-container{
+  max-width: clamp(20.4375rem, 9.4046rem + 47.0738vw, 32rem);
+  text-align: center;
+  margin: clamp(1.5rem, -4.7023rem + 26.4631vw, 8rem) auto 0;
+  padding-bottom: 8rem;
+}
+
+.main-title{
+  font-size: clamp(5rem, 1.1832rem + 16.285vw, 9rem);
+  color: #fff;
+  line-height: 1;
+}
+
+.main-title span{
+  display: block;
+  font-size: clamp(1rem, 0.2844rem + 3.0534vw, 1.75rem);
+  color: var(--blue-300);
+  word-spacing: 0.12rem;
+  letter-spacing: 0.12rem;
+  margin-bottom: clamp(1.5rem, 0.5458rem + 4.0712vw, 2.5rem);
+}
+
+.main-container .text{
+  margin: clamp(2rem, 1.0458rem + 4.0712vw, 3rem) 0 clamp(4rem, 11.8168rem + -16.285vw, 8rem);
+}
+
+.button-explore{
+  width: clamp(9rem, 1.3664rem + 32.57vw, 17rem);
+  height: clamp(9rem, 1.3664rem + 32.57vw, 17rem);
+  background: radial-gradient(circle at 30% 30%, #ffffff 40%, hsla(234, 26%, 7%, 1) 70%);
+  border-radius: 50%;
+  font-size: clamp(1.125rem, 0.2901rem + 3.5623vw, 2rem);
+  color: #0b0d17;
+  margin: 0 auto;
+}
+
+
+/*ANIMATION*/
+
+@media (prefers-reduced-motion: no-preference){
+
+
+  .anim-menu{
+
+    /*  animation: name duration timing-function delay iteration-count direction fill-mode; 
+  animation: 3s ease-in 1s infinite reverse both running slidein;  */  
+
+    animation: translateMenu 0.5s ease;
+
+  }
+
+  @keyframes translateMenu {
+
+    0%{
+      transform: translateX(100%);
+    }
+
+    100%{
+      transform: translateX(0%);
+    }
+    
+  }
+
+
+  .anim-menu-reverse{
+
+    /*  animation: name duration timing-function delay iteration-count direction fill-mode; 
+  animation: 3s ease-in 1s infinite reverse both running slidein;  */  
+
+    animation: translateMenuReverse 0.5s ease;
+
+  }
+
+  @keyframes translateMenuReverse {
+
+    0%{
+      transform: translateX(0%);
+    }
+
+    100%{
+      transform: translateX(100%);
+    }
+    
+  }
+
+
+  .anim-opacity{
+
+    /*  animation: name duration timing-function delay iteration-count direction fill-mode; 
+  animation: 3s ease-in 1s infinite reverse both running slidein;  */  
+
+    animation: opacity 1s ease 0s 2 alternate;
+
+    /* animation-name: opacity;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+    animation-fill-mode: normal;
+    animation-play-state: running; */
+
+  }
+
+  @keyframes opacity {
+
+    0%{
+      opacity: 1;
+    }
+
+    100%{
+      opacity: 0;
+    }
+    
+  }
+
+}
+
+
+/****** TABLET *******/
+
+@media screen and (min-width: 36.25rem){
+
+  body{
+    background: url(./assets/home/background-home-tablet.jpg) no-repeat 0 0 / 100% 100%;
+    padding: clamp(0rem, 3.9474rem + -16.8421vw, 1rem); /* padding under 320px */
+  }
+
+
+  /*HEADER*/
+
+  .header-container{
+    max-width: 90rem;
+    padding: 0;
+  }
+
+  .header-logo{
+    margin: 0 clamp(2rem, 9.8947rem + -33.6842vw, 4rem);
+  }
+
+  .button-menu{
+    display: none;
+  }
+  
+  .menu{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    max-width: 46rem;
+    height: 100%;
+    background: hsla(0, 0%, 100%, 0.1);
+    padding: 0 clamp(0rem, -4.5714rem + 9.5238vw, 4rem) 0 0;
+    position: relative;
+  }
+  
+  .list-menu{
+    flex-direction: row;
+    margin-top: 0;
+  }
+  
+  .li-menu{
+    margin-right: 2rem;
+    margin-bottom: 0;
+    padding: 2.3rem 0;
+
+  }
+  
+  .li-menu.selected{
+    border-right: none;
+    border-bottom: 0.2rem solid #fff;
+  }
+  
+  .li-menu:nth-child(1) span{
+    display: none;
+  }
+  
+}
+
+
+/****** DESKTOP *******/
+
+@media screen and (min-width: 75rem){
+
+
+  body{
+    background: url(./assets/home/background-home-desktop.jpg) no-repeat 0 0 / 100% 100%;
+  }
+
+  .barlow-regular {
+    font-size: 1.125rem;
+  }
+  
+
+  /*HEADER*/
+
+  .header-container{
+    margin-top: 3rem;
+  }
+
+  .header-logo{
+    margin: 0 4rem;
+  }
+
+  .line-header{
+    display: block;
+    width: 35rem;
+    height: 0.0625rem;
+    background: hsla(0, 0%, 100%, 0.4);
+    border: none;
+    position: relative;
+      left: 2rem;
+    z-index: 1;
+  }
+
+  .li-menu:nth-child(1) span{
+    display: inline-block;
+  }
+
+
+  /*MAIN*/
+
+  .home .main-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, min-content);
+    max-width: 69.375rem;
+    text-align: left;
+    margin: 28rem auto 0;
+    padding-bottom: 4rem; 
+  }
+
+  .main-title{
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .main-title span{
+    letter-spacing: 0.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .main-container .text{
+    grid-column: 1;
+    grid-row: 2;
+    margin: 2rem 0;
+  }
+
+  .button-explore{
+    grid-column: 2;
+    grid-row: 1 / -1;
+    margin: 0 0 0 auto;
+  }
+
+}

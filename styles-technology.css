@@ -1,0 +1,178 @@
+
+:root{
+
+	/* @link https://utopia.fyi/clamp/calculator?a=768,1440,16—48 */
+  
+	--width-mobile-327px: 20.4375rem;
+	--width-mobile-to-desktop: clamp(20.4375rem, -1.0916rem + 91.8575vw, 43rem);
+  
+	/*COLOR*/
+  
+	--blue-900: #0b0d17;
+	--blue-300: #d0d6f9;
+
+}
+
+.technology{
+	background: url(./assets/technology/background-technology-mobile.jpg) no-repeat 0 0 / 100% 100%;
+}
+
+
+/*MAIN*/
+
+.techno-main-container .page-title{
+	width: clamp(20.4375rem, -1.0916rem + 91.8575vw, 43rem);
+	text-align: center;	
+	margin: 2rem auto 5rem;
+}
+
+.container-image-techno{
+	background: url(./assets/technology/image-launch-vehicle-portrait.jpg) no-repeat bottom center / cover;
+	width: 100%;
+	height: clamp(16.125rem, 10.2209rem + 25.1908vw, 22.3125rem);
+}
+
+.container-text{
+	max-width: clamp(20.4375rem, 9.4046rem + 47.0738vw, 32rem);
+	text-align: center;
+}
+
+.container-button-techno{
+	width: clamp(9.125rem, 6.501rem + 11.1959vw, 11.875rem);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 1.5rem auto 2.5rem;
+}
+
+.button.button-techno{
+	text-align: center;
+	align-content: center;
+	width: clamp(2.5rem, 1.5458rem + 4.0712vw, 3.5rem);
+	height: clamp(2.5rem, 1.5458rem + 4.0712vw, 3.5rem);
+	border-radius: 50%;
+	border: 0.025rem solid hsla(0, 0%, 100%,0.5);
+	color: #fff;
+	font-size: clamp(1.125rem, 0.7672rem + 1.5267vw, 1.5rem);
+} 
+
+.button-techno.selected{
+	background: #fff;
+	border: 0.025rem solid #fff;
+	color: #0b0d17;
+}
+
+.button-techno a{
+	width: 100%;
+	height: 100%;
+}
+
+.techno-main-container .text{
+	margin: 1rem 0 2rem;
+}
+
+
+
+@media screen and (min-width: 36.25rem){
+
+	.technology{
+		background: url(./assets/technology/background-technology-tablet.jpg) no-repeat 0 0 / 100% 100%;
+	}
+	
+	/*MAIN*/
+	
+	.techno-main-container .page-title{
+		text-align: left;
+	}
+	
+	.container-image-techno{
+		background: url(./assets/technology/image-launch-vehicle-portrait.jpg) no-repeat center / cover;
+	}
+		
+	.container-button-techno{
+		margin: 2rem auto 2.5rem;
+	}
+	
+}
+
+
+
+/****** DESKTOP *******/
+
+@media screen and (min-width: 75rem){
+
+
+	.technology{
+		background: url(./assets/technology/background-technology-desktop.jpg) no-repeat 0 0 / 100% 100%;
+	}
+	
+	/*MAIN*/
+	
+	.techno-main-container{
+		width: 69.375rem;
+		margin: 2rem auto;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, min-content);
+		padding-bottom: 6rem;
+	}
+		
+	.techno-main-container .page-title{
+		grid-column: 1 / -1;
+		grid-row: 1;
+		width: 100%;
+		margin: 0 0 5rem;
+		text-align: left;
+	}
+	
+	.container-image-techno{
+		grid-column: 2;
+		grid-row: 2;
+		background: url(./assets/technology/image-launch-vehicle-portrait.jpg) no-repeat center / cover;
+		width: 38rem;
+		height: 37.5rem; 
+		position: relative;
+			left: 2rem;
+	}
+		
+	.techno-main-container .container-text{
+		grid-column: 1;
+		grid-row: 2;
+		display: grid;
+		grid-template-columns: repeat(2, minmax(min-content, max-content));
+		grid-template-rows: repeat(2, min-content);
+		align-self: center;
+		max-width: 100%;
+		width: 39.6875rem;
+		height: 19rem;
+		text-align: left;
+		margin-top: 1rem;
+	}
+		
+	.container-button-techno{
+		grid-column: 1;
+		grid-row: 1 / -1;
+		width: 5rem;
+		flex-direction: column;
+		margin-right: 4rem;
+		margin: 0 4rem 0 0;
+		height: 18.75rem;
+	}
+	
+	.button.button-techno{
+		width: 5rem;
+		height: 5rem;
+	} 
+	
+	.techno-main-container .sub-title{
+		grid-column: 2;
+		grid-row: 1;
+	}
+	
+	.techno-main-container .text{
+		grid-column: 2;
+		grid-row: 2;
+	}
+	
+
+}

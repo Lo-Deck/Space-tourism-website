@@ -1,0 +1,195 @@
+
+:root{
+
+  /* @link https://utopia.fyi/clamp/calculator?a=768,1440,16—48 */
+
+  --width-mobile-327px: 20.4375rem;
+  --width-mobile-to-desktop: clamp(20.4375rem, -1.0916rem + 91.8575vw, 43rem);
+
+  /*COLOR*/
+
+  --blue-900: #0b0d17;
+  --blue-300: #d0d6f9;
+
+}
+
+
+.destination{
+	background: url(./assets/destination/background-destination-mobile.jpg) no-repeat 0 0 / 100% 100%;
+}
+
+
+/*MAIN*/
+
+.page-container{
+	max-width:  clamp(20.4375rem, -1.0916rem + 91.8575vw, 43rem);
+	margin: clamp(2rem, 1.7391rem + 1.3043vw, 2.75rem) auto 0;
+	text-align: center;
+	padding-bottom: 2rem;
+}
+
+.page-title{
+	font-size: clamp(1rem, 0.7615rem + 1.0178vw, 1.25rem);
+	color: #fff;
+	letter-spacing: 0.1rem;
+	margin-bottom: clamp(4.375rem, 3.1823rem + 5.0891vw, 5.625rem);
+}
+
+.page-title span{
+	display: inline-block;
+	opacity: 0.25;
+	margin-right: 1.25rem;
+}
+
+.destination .image-planet{
+	width:  clamp(9.375rem, 0.4294rem + 38.1679vw, 18.75rem);
+	height:  clamp(9.375rem, 0.4294rem + 38.1679vw, 18.75rem);
+	margin: 0 auto clamp(4rem, 2.688rem + 5.598vw, 5.375rem);
+}
+
+.container-text{
+	max-width: 32.125rem;
+	margin: 0 auto;
+}
+
+.destination .list-planet{
+	flex-direction: row;
+	justify-content: space-between;
+	color: #fff;
+	font-size: clamp(0.875rem, 0.7557rem + 0.5089vw, 1rem);
+	letter-spacing: clamp(0.0625rem, 0.0029rem + 0.2545vw, 0.125rem);
+	width: 16rem;
+	margin: 0 auto;
+}
+
+.destination .li-planet{
+	padding: 0 0 1rem;
+}
+
+.destination .li-planet .button{
+	font-family: inherit;
+	font-size: inherit;
+	letter-spacing: inherit;
+	color: inherit;
+	text-transform: inherit;
+}
+
+.destination .li-planet.selected{
+	border-bottom: 0.2rem solid #fff;
+}
+
+.destination .planet-title{
+	font-size: clamp(3.5rem, 2.0687rem + 6.1069vw, 5rem);
+	color: #fff;
+	margin-top: 2rem;
+}
+
+.destination .page-container .text{
+	margin: 1rem auto 2rem;
+}
+
+.destination .line{
+	display: block;
+	width: 100%;
+	height: 0.0625rem;
+	background: hsla(0, 0%, 100%, 0.4);
+	border: none;
+}
+
+.destination .info{
+	font-size: 1.75rem;
+	color: #fff;
+	margin-top: 1.5rem;
+}
+
+.destination .info span:nth-of-type(1){
+	display: block;
+	font-size: 0.875rem;
+	color: var(--blue-300);
+	margin-bottom: 0.75rem;
+}
+
+
+/****** TABLET *******/
+
+@media screen and (min-width: 36.25rem){
+
+	.destination{
+		background: url(./assets/destination/background-destination-tablet.jpg) no-repeat 0 0 / 100% 100%;
+	}
+	
+/*MAIN*/
+
+	.page-container{
+		padding-bottom: 4rem;
+	}
+
+	.page-title{
+		text-align: left;
+	}
+
+	.destination .container-info{
+		display: flex;
+		justify-content: space-around;
+	}
+
+}
+
+
+
+
+/****** DESKTOP *******/
+
+@media screen and (min-width: 75rem){
+
+	.destination{
+		background: url(./assets/destination/background-destination-desktop.jpg) no-repeat 0 0 / 100% 100%;
+	}
+
+	/*MAIN*/
+
+	.page-container{
+		max-width: 69.375rem;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, min-content);
+		margin: 3.5rem auto 0;
+	}
+
+	.page-title{
+		grid-column: 1;
+		grid-row: 1;
+		font-size: 1.75rem;
+		letter-spacing: 0.25rem;
+		margin-bottom: 8rem;
+	}
+
+	.destination .image-planet{
+		grid-column: 1;
+		grid-row: 2;
+		width: 30rem;
+		height: 30rem;
+		margin: 0 0 0 2rem; 
+	}
+
+	.destination .container-text{
+		grid-column: 2;
+		grid-row: 2;
+		max-width: 27.8125rem;
+		text-align: left;
+	}
+
+	.destination .list-planet{
+		margin: 0; 
+	}
+
+	.destination .planet-title{
+		margin-top: 3rem;
+		font-size: 6rem;
+	}
+
+	.destination .info{
+		margin-top: 2.5rem;
+	}
+
+}
