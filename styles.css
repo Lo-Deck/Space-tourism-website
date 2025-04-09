@@ -329,7 +329,10 @@ a{
     margin-right: 2rem;
     margin-bottom: 0;
     padding: 2.3rem 0;
+  }
 
+  .li-menu:hover{
+    border-bottom: 0.2rem solid hsla(0, 0%, 100%, 0.5);
   }
   
   .li-menu.selected{

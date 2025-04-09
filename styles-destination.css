@@ -133,6 +133,10 @@
 		justify-content: space-around;
 	}
 
+	.destination .li-planet:hover{
+		border-bottom: 0.2rem solid hsla(0, 0%, 100%, 0.5);
+	}
+
 }
 
 
